@@ -1,0 +1,24 @@
+{
+  "name": "karma-mediawiki-reporter",
+  "version": "0.0.1",
+  "description": "Karma reporter plugin to save test reporter as a wiki page on MediaWiki site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocornus/karma-mediawiki-reporter.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-reporter",
+    "mediawiki"
+  ],
+  "author": "Sean Chen <sean.chen@leocorn.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/leocornus/karma-mediawiki-reporter/issues"
+  },
+  "homepage": "https://github.com/leocornus/karma-mediawiki-reporter#readme"
+}
