@@ -4,7 +4,8 @@
   "description": "Karma reporter plugin to save test reporter as a wiki page on MediaWiki site.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm run karma",
+    "karma": "node node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/leocornus/karma-mediawiki-reporter/issues"
   },
-  "homepage": "https://github.com/leocornus/karma-mediawiki-reporter#readme"
+  "homepage": "https://github.com/leocornus/karma-mediawiki-reporter#readme",
+  "dependencies": {
+    "jasmine-core": "^2.3.0",
+    "karma": "^0.12.31",
+    "karma-jasmine": "^0.3.5"
+  },
+  "devDependencies": {
+    "karma-firefox-launcher": "^0.1.4"
+  }
 }
