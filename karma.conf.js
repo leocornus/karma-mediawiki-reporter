@@ -1,3 +1,4 @@
+var MediawikiReporter = require('./index.js');
 
 module.exports = function(config) {
   config.set({
@@ -16,13 +17,14 @@ module.exports = function(config) {
     browsers : ['Firefox'],
 
     plugins : [
+            'karma-mediawiki-reporter',
             'karma-firefox-launcher',
             'karma-jasmine'
             ],
 
     colors : true,
 
-    reporters: ['dots'],
+    reporters: ['mediawiki', 'dots'],
 
     htmlReporter: {
       outputDir: 'karma_report',
