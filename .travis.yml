@@ -11,7 +11,7 @@ before_script:
   - sleep 1
   - cd test
   - npm install
-  - cp -v ../* node_modules/karma-mediawiki-reporter/
+  - cp -v ../*.j* node_modules/karma-mediawiki-reporter/
 
 script: 
   - npm test
