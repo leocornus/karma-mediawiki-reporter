@@ -5,6 +5,8 @@
   "main": "",
   "scripts": {
     "test": "npm run karma",
+
+    "prekarma": "cp -v ../*.j* node_modules/karma-mediawiki-reporter",
     "karma": "node node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
