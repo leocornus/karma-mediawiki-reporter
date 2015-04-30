@@ -17,6 +17,16 @@ var MediawikiReporter = function (baseReporterDecorator, formatError, config) {
     var firstRun = true;
 
     config.mediawikiReporter = config.mediawikiReporter || {};
+
+    this.onRunComplete = function(browsers, results) {
+        if (!results.disconnected && !results.error) {
+            if (!results.failed) {
+                this.write(this.TOTAL_SUCCESS, results.success);
+            } else {
+                this.write(this.TOTAL_FAILED, results.failed, results.success);
+            }
+        }
+    };
 };
 
 // inject karma runner baseReporter and config, 
