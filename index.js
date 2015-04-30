@@ -1,6 +1,8 @@
 'use strict';
 // Q: what's this mean?
 
+var DotsColorReporter = require('karma/lib/reporters/dots_color');
+
 /**
  * The MediawikiReporter.
  * 
@@ -12,21 +14,26 @@
 var MediawikiReporter = function (baseReporterDecorator, formatError, config) {
     // extend the base reporter
     baseReporterDecorator(this);
+    //BaseReporter.call(this, formatError);
+    //BaseColorReporter.call(this);
+    DotsColorReporter.call(this, formatError);
 
-    var self = this;
     var firstRun = true;
 
     config.mediawikiReporter = config.mediawikiReporter || {};
 
-    this.onRunComplete = function(browsers, results) {
-        if (!results.disconnected && !results.error) {
-            if (!results.failed) {
-                this.write(this.TOTAL_SUCCESS, results.success);
-            } else {
-                this.write(this.TOTAL_FAILED, results.failed, results.success);
-            }
-        }
-    };
+    // run complete event, where you could print out the summary of 
+    // a test suite.
+    //this.onRunComplete = function(browsers, results) {
+    //    if (!results.disconnected && !results.error) {
+    //        if (!results.failed) {
+    //            this.write(this.TOTAL_SUCCESS, results.success);
+    //        } else {
+    //            this.write(this.TOTAL_FAILED, results.failed, 
+    //                       results.success);
+    //        }
+    //    }
+    //};
 };
 
 // inject karma runner baseReporter and config, 
