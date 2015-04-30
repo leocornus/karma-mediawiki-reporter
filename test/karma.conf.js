@@ -5,8 +5,7 @@ module.exports = function(config) {
     basePath : './',
 
     files : [
-      'index.js',
-      'test/*.js'
+      '*.js'
     ],
 
     autoWatch : true,
@@ -24,7 +23,7 @@ module.exports = function(config) {
 
     colors : true,
 
-    reporters: ['mediawiki', 'dots'],
+    reporters: ['mediawiki'],
 
     htmlReporter: {
       outputDir: 'karma_report',
