@@ -28,7 +28,7 @@ Basically answer the following question:
 
 :onSpecComplete(browser, result):
   complete each spec, a test suite, a js file, etc.
-  where you print out the message for each spec.
+  where you print out the message for each spec, in the given browser.
 
 :specSuccess, specSkipped, specFailure:
   will be called by **onSpecComplete** based on the result.
@@ -40,9 +40,21 @@ Basically answer the following question:
 :onRunComplete:
   complete all tests, where you write overall summary
 
-:renderBrowser"
+:renderBrowser:
   utility function to get ready the summary message for a browser.  
   it is normally used in function **onBrowserComplete**.
+
+Structure of mocha reporter
+---------------------------
+
+mocha reporter is using the following events:
+
+- onRunStart
+- onBrowserStart
+- onSpecComplete
+- specComplete, this will be used for specSuccess, specSkipped, 
+  and specFailure.
+- onRunComplete
 
 Code Memos
 ----------
