@@ -51,7 +51,7 @@ Here are steps:
 - set up prekarma script to copy the latest reporter js code to
   node_modules folder.
 
-Here is a sample forthe scripts::
+Here is a sample for the scripts::
 
   "scripts": {
     "test": "npm run karma",
