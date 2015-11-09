@@ -25,7 +25,8 @@
   "dependencies": {
     "jasmine-core": "^2.3.0",
     "karma": "^0.12.31",
-    "karma-jasmine": "^0.3.5"
+    "karma-jasmine": "^0.3.5",
+    "nodemw": "^0.7.5"
   },
   "devDependencies": {
     "karma-firefox-launcher": "^0.1.4"
