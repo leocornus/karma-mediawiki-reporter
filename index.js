@@ -21,7 +21,8 @@ var MediawikiReporter = function (baseReporterDecorator, formatError, config) {
 
     var firstRun = true;
 
-    config.mediawikiReporter = config.mediawikiReporter || {};
+    // get config from karma.conf.js file.
+    config = config || {};
 
     // run complete event, where you could print out the summary of 
     // a test suite.
@@ -41,7 +42,7 @@ var MediawikiReporter = function (baseReporterDecorator, formatError, config) {
 // using dependence injection.
 MediawikiReporter.$inject = ['baseReporterDecorator', 
                              'formatError', 
-                             'config'];
+                             'config.mediawikiReporter'];
 
 // PUBISH DI MODULE
 module.exports = {

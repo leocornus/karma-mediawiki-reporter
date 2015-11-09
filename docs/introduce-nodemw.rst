@@ -12,4 +12,12 @@ Actions:
   MediaWiki site.
 - **offline** option to skip MediaWiki site update.
 
+Report config on karma.conf
+---------------------------
+
+Reference karma-html-reporter_ to explore how to load reporter's
+configuration from **karma.conf.js**.
+
+
 .. _nodemw: https://github.com/macbre/nodemw
+.. _karma-html-reporter: https://github.com/dtabuenc/karma-html-reporter

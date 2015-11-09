@@ -25,6 +25,21 @@ module.exports = function(config) {
 
     reporters: ['mediawiki'],
 
+    // configuration for mediawiki reporter
+    mediawikiReporter: {
+      // configuration for nodemw.
+      nodemwServer: 'en.wikipwdia.org',
+      nodemwPath: '/w',
+      // default is offline, only print out 
+      // the wiki page infomation.
+      offline: true,
+      // default pagetytle will be the browserName,
+      // TODO: a list of field name for page title.
+      pageTitle: '%COMMIT%-%BROWSER_NAME%',
+      // category names separated by ','
+      pageCategory: 'CI Build,Karma Build',
+    },
+
     htmlReporter: {
       outputDir: 'karma_report',
       templatePath: null, // set if you moved jasmine_template.html
